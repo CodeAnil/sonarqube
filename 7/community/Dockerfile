@@ -13,7 +13,7 @@ ENV SONAR_VERSION=7.9.1 \
 # Http port
 EXPOSE 9000
 
-RUN groupadd -r sonarqube && useradd -r -g sonarqube sonarqube
+RUN groupadd -g 10000 -r sonarqube && useradd -u 10000 -r -g sonarqube sonarqube
 
 # pub   2048R/D26468DE 2015-05-25
 #       Key fingerprint = F118 2E81 C792 9289 21DB  CAB4 CFCA 4A29 D264 68DE
